@@ -1,6 +1,5 @@
 <%
 	String authorization = (String) request.getSession().getAttribute("Authorization");
-	//System.out.println("index.jsp"+authorization);
 %>
 <!DOCTYPE HTML>
 <html>
