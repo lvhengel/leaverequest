@@ -7,11 +7,17 @@
               <meta http-equiv="X-UA-Compatible" content="IE=edge">
               <title>Leave Request with SAP NetWeaver Cloud</title>
 
-   			  <script src="resources/sap-ui-core.js"
+   			  <!--  <script src="resources/sap-ui-core.js"
                       id="sap-ui-bootstrap"
                       data-sap-ui-libs="sap.ui.commons,sap.ui.table,sap.ui.ux3"
                       data-sap-ui-theme="sap_goldreflection" >
    			  </script>
+   			  -->
+   			  
+   			  <script id="sap-ui-bootstrap" type="text/javascript" src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
+					  data-sap-ui-theme="sap_goldreflection" data-sap-ui-xx-preload="sync" data-sap-ui-libs="sap.ui.commons,sap.ui.ux3,sap.ui.table"></script>
+   			  
+   			  
               <!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
 			  <script src="scripts/utils.js"></script>
    			  <script>
