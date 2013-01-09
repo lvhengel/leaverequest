@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>nl.ciber</groupId>
+	<groupId>nl.ciber.sapnwcloud</groupId>
 	<artifactId>leaverequest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -37,25 +37,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.sap.netweaver.cloud</groupId>
-			<artifactId>neo-sdk-core-api</artifactId>
-			<version>${nw.cloud.sdk.version}</version>
-			<scope>system</scope>
-			<systemPath>${nw.cloud.sdk.path}/api/neo-sdk-core-api-${nw.cloud.sdk.version}.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.1.1</version>
-			<scope>system</scope>
-			<systemPath>${nw.cloud.sdk.path}/api/httpclient-4.1.1.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.1</version>
-			<scope>system</scope>
-			<systemPath>${nw.cloud.sdk.path}/api/httpcore-4.1.jar</systemPath>
+			<groupId>nl.ciber.sapnwcloud</groupId>
+			<artifactId>bpm-api-servlets</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 	<build>
