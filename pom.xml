@@ -7,19 +7,11 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<!-- Properties that hold information on the location and version of the 
-			SAP NetWeaver Cloud SDK -->
-		<nw.cloud.sdk.path>/Volumes/Data/Development/sapnwcloud/neo-sdk-1.16.0</nw.cloud.sdk.path>
-		<nw.cloud.sdk.version>1.16.0</nw.cloud.sdk.version>
-
-		<!-- Property that holds supported JDK version for the given SAP NetWeaver 
-			Cloud SDK -->
-		<nw.cloud.jdk.version>1.7</nw.cloud.jdk.version>
-
-		<!-- Property setting source encoding to UTF-8 -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
+        <nw.cloud.jdk.version>1.6</nw.cloud.jdk.version>
+        <nw.cloud.sdk.version>1.16.0</nw.cloud.sdk.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 
 	<dependencies>
 		<!-- Required for compilation and provided at runtime (SAP NetWeaver SDK 
