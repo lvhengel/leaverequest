@@ -8,7 +8,7 @@
 
 	<properties>
         <nw.cloud.jdk.version>1.6</nw.cloud.jdk.version>
-        <nw.cloud.sdk.version>1.16.0</nw.cloud.sdk.version>
+        <nw.cloud.sdk.version>1.17.0</nw.cloud.sdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -23,15 +23,31 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.6.1</version>
-			<scope>provided</scope>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sap.netweaver.cloud</groupId>
+            <artifactId>neo-sdk-core-api</artifactId>
+            <version>${nw.cloud.sdk.version}</version>
+            <scope>system</scope>
+            <systemPath>${env.NW_CLOUD_SDK_PATH}/api/neo-sdk-core-api-${nw.cloud.sdk.version}.jar</systemPath>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.1.1</version>
+			<scope>system</scope>
+			<systemPath>${env.NW_CLOUD_SDK_PATH}/api/httpclient-4.1.1.jar</systemPath>
 		</dependency>
 		<dependency>
-			<groupId>nl.ciber.sapnwcloud</groupId>
-			<artifactId>bpm-api-servlets</artifactId>
-			<version>0.0.1</version>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.1</version>
+			<scope>system</scope>
+			<systemPath>${env.NW_CLOUD_SDK_PATH}/api/httpcore-4.1.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<build>
@@ -63,43 +79,9 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
+					<warName>${project.artifactId}</warName>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.8</version>
-				<configuration>
-					<wtpmanifest>true</wtpmanifest>
-					<wtpversion>2.0</wtpversion>
-					<additionalProjectnatures>
-						<projectnature>org.eclipse.m2e.core.maven2Nature</projectnature>
-						<projectnature>org.eclipse.jem.workbench.JavaEMFNature</projectnature>
-						<projectnature>org.eclipse.wst.common.modulecore.ModuleCoreNature</projectnature>
-						<projectnature>org.eclipse.wst.common.project.facet.core.nature</projectnature>
-						<projectnature>org.eclipse.jdt.core.javanature</projectnature>
-						<projectnature>org.eclipse.wst.jsdt.core.jsNature</projectnature>
-					</additionalProjectnatures>
-					<additionalProjectFacets>
-						<jst.web>2.5</jst.web>
-						<wst.jsdt.web>1.0</wst.jsdt.web>
-					</additionalProjectFacets>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.sap.research</groupId>
-				<artifactId>nwcloud-maven-plugin</artifactId>
-				<version>1.0.0.RELEASE</version>
-				<executions>
-					<execution>
-						<id>after.package</id>
-						<phase>package</phase>
-						<goals>
-							<goal>hint</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>

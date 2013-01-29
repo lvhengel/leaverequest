@@ -106,7 +106,6 @@ sap.ui.controller("leaverequest.leave", {
 	    		     			});
     	    		     	}
     	    		     });
-    		     		
     		     	}
     			});
 	     	}

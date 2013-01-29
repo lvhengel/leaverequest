@@ -1,84 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>leaverequest</display-name>
- <!--  
-  <servlet>
-    <display-name>ResourceServlet</display-name>
-    <servlet-name>ResourceServlet</servlet-name>
-    <servlet-class>com.sap.ui5.resource.ResourceServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ResourceServlet</servlet-name>
-    <url-pattern>/resources/*</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>ResourceServlet</servlet-name>
-    <url-pattern>/test-resources/*</url-pattern>
-  </servlet-mapping>
-  <context-param>
-    <param-name>com.sap.ui5.resource.DEV_MODE</param-name>
-    <param-value>true</param-value>
-  </context-param>
-  <filter>
-    <display-name>CacheControlFilter</display-name>
-    <filter-name>CacheControlFilter</filter-name>
-    <filter-class>com.sap.ui5.resource.CacheControlFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>CacheControlFilter</filter-name>
-    <url-pattern>*.html</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>CacheControlFilter</filter-name>
-    <url-pattern>*.js</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>CacheControlFilter</filter-name>
-    <url-pattern>*.xml</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>CacheControlFilter</filter-name>
-    <url-pattern>*.json</url-pattern>
-  </filter-mapping>
-  <filter-mapping>
-    <filter-name>CacheControlFilter</filter-name>
-    <url-pattern>*.css</url-pattern>
-  </filter-mapping>
-  <servlet>
-    <servlet-name>SimpleProxyServlet</servlet-name>
-    <servlet-class>com.sap.ui5.proxy.SimpleProxyServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SimpleProxyServlet</servlet-name>
-    <url-pattern>/proxy/*</url-pattern>
-  </servlet-mapping>
-  -->
   <servlet>
     <description></description>
-    <display-name>LogonServlet</display-name>
-    <servlet-name>LogonServlet</servlet-name>
-    <servlet-class>nl.ciber.bpm.LogonServlet</servlet-class>
+    <display-name>LoginProxyServlet</display-name>
+    <servlet-name>LoginProxyServlet</servlet-name>
+    <servlet-class>nl.ciber.bpm.LoginProxyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>LogonServlet</servlet-name>
-    <url-pattern>/LogonServlet</url-pattern>
+    <servlet-name>LoginProxyServlet</servlet-name>
+    <url-pattern>/LoginProxyServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>ConnectivityBPM</display-name>
-    <servlet-name>ConnectivityBPM</servlet-name>
-    <servlet-class>nl.ciber.bpm.ConnectivityBPM</servlet-class>
+    <display-name>BPMProxyServlet</display-name>
+    <servlet-name>BPMProxyServlet</servlet-name>
+    <servlet-class>nl.ciber.bpm.BPMProxyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ConnectivityBPM</servlet-name>
+    <servlet-name>BPMProxyServlet</servlet-name>
     <url-pattern>/bpm/bpemservices/*</url-pattern>
   </servlet-mapping>
   <resource-ref>
-    <res-ref-name>bpmdest</res-ref-name>
+    <res-ref-name>logindest</res-ref-name>
     <res-type>com.sap.core.connectivity.api.http.HttpDestination</res-type>
   </resource-ref>
   <resource-ref>
-    <res-ref-name>logindest</res-ref-name>
+    <res-ref-name>bpmdest</res-ref-name>
     <res-type>com.sap.core.connectivity.api.http.HttpDestination</res-type>
   </resource-ref>
   <welcome-file-list>

@@ -61,7 +61,6 @@ sap.ui.jsview("leaverequest.approve", {
 			oMatrix.createRow(oId);
 			
 			var oFullName = new sap.ui.commons.TextView("approveFullName");
-			//oFullName.setText("Leo van Hengel");
 			var oFullNameLabel = new sap.ui.commons.Label({text:"Name: ", labelFor:oFullName});
 			oMatrix.createRow(oFullNameLabel, oFullName);
 			

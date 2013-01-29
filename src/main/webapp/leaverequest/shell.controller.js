@@ -33,12 +33,6 @@ sap.ui.controller("leaverequest.shell", {
 //
 //   }
 	
-	onWorksetItemSelected : function(oEvent) {
-		
-		
-		
-	},
-	
 	getLoginView : function() {
 		
 		var oView = sap.ui.getCore().byId("view.login");
@@ -131,7 +125,6 @@ sap.ui.controller("leaverequest.shell", {
     	oShell.destroyHeaderItems();
 		oShell.setShowLogoutButton(false);
 		
-		//var that = this.oParent.getController();
 		var oView = this.getLoginView();
 		
 		oShell.setContent(oView);
@@ -140,9 +133,7 @@ sap.ui.controller("leaverequest.shell", {
   	  		key : "wi_login",
   	  		text : "Login"
   	  	}));
-		
-		
-		
+
 	},
 	
 	logout : function() {
@@ -150,7 +141,6 @@ sap.ui.controller("leaverequest.shell", {
     	$.ajax({ 
 			 type: 'get', 
 			 url: 'LogonServlet?action=logout',
-			 //data: form,
 			 dataType: 'text',
 			 success: function(data) {
 				 var logoutData = $.trim(data);

@@ -53,8 +53,6 @@ sap.ui.controller("leaverequest.approve", {
 				var oTable = sap.ui.getCore().byId("tableApprove");
 		  		oTable.setModel(oModel);
 		  		oTable.bindRows("/modelData/TaskAbstracts/TaskAbstract");
-		  		//oTable.getRows()
-		  		//console.log(oTable.getRows());
 			}
 		});
 		

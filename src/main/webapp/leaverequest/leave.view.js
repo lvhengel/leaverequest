@@ -35,15 +35,13 @@ sap.ui.jsview("leaverequest.leave", {
 
 		// Create a DatePicker for Start Date	
 		var oStartDate = new sap.ui.commons.DatePicker('startdate');
-		//oStartDate.setYyyymmdd("20100101");
-		oStartDate.setLocale("en-US"); // Try with "de" or "fr" instead!
+		oStartDate.setLocale("en-US"); 
         var oStartDateLabel = new sap.ui.commons.Label({text:"Start Date: ", labelFor:oStartDate});
         oMatrix.createRow(oStartDateLabel,oStartDate);
 
 		// Create a DatePicker for Start Date	
 		var oEndDate = new sap.ui.commons.DatePicker('enddate');
-		//oEndDate.setYyyymmdd("20100101");
-		oEndDate.setLocale("en-US"); // Try with "de" or "fr" instead!
+		oEndDate.setLocale("en-US");
         var oEndDateLabel = new sap.ui.commons.Label({text:"End Date: ", labelFor:oEndDate});
         oMatrix.createRow(oEndDateLabel,oEndDate);
 
@@ -70,12 +68,10 @@ sap.ui.jsview("leaverequest.leave", {
 			widths : ['150px', '200px'] });
 				
 	 	var oCell = new sap.ui.commons.layout.MatrixLayoutCell({ colSpan: 2 });
-		//oCell.setBackgroundDesign(sap.ui.commons.layout.BackgroundDesign.Border);
-		
+
 		var oTV = new sap.ui.commons.TextView({
 			id : 'messageLeave',
 			text : 'Thank you.\n\nYour Leave Request is send to your manager.',
-			//semanticColor: sap.ui.commons.TextViewColor.Positive,
 			design : sap.ui.commons.TextViewDesign.H5 });
 
 		oCell.addContent(oTV);
@@ -89,7 +85,6 @@ sap.ui.jsview("leaverequest.leave", {
 		);
 
 		oCell = new sap.ui.commons.layout.MatrixLayoutCell({ colSpan: 2 });
-		//oCell.setHAlign(sap.ui.commons.layout.HAlign.Right);
 		oCell.addContent(oButtonSave);
 		oMatrix1.createRow(oCell);
 		oMatrix1.setVisible(false);

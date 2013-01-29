@@ -15,7 +15,6 @@ sap.ui.jsview("leaverequest.shell", {
     		showInspectorTool : false,
     		showFeederTool : false,
     		showLogoutButton : false,
-    		worksetItemSelected : oController.onWorksetItemSelected,
     		logout: oController.logout
     	  });
     	  

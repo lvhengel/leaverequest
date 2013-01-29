@@ -32,7 +32,6 @@ sap.ui.controller("leaverequest.login", {
 //	 
 //   },
 	
-
 	doLogin : function() {
 		
     	var username = sap.ui.getCore().byId("username").getValue();
@@ -42,7 +41,7 @@ sap.ui.controller("leaverequest.login", {
     	
     	$.ajax({ 
 			 type: 'post', 
-			 url: 'LogonServlet',
+			 url: 'LoginProxyServlet',
 			 data: form,
 			 dataType: 'text',
 			 success: function(data) {
