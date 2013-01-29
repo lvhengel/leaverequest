@@ -140,7 +140,7 @@ sap.ui.controller("leaverequest.shell", {
 		
     	$.ajax({ 
 			 type: 'get', 
-			 url: 'LogonServlet?action=logout',
+			 url: 'LoginProxyServlet?action=logout',
 			 dataType: 'text',
 			 success: function(data) {
 				 var logoutData = $.trim(data);
