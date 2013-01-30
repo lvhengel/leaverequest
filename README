@@ -1,11 +1,12 @@
-My first SAP NetWeaver Cloud application
-
 LeaveRequest with SAP NetWeaver BPM connection
+
+My first SAP NetWeaver Cloud application
 
 Running locally and in the Cloud
 
 1. NW_CLOUD_SDK_PATH: Setup a system variable with the name “NW_CLOUD_SDK_PATH” and enter the path to the directory where you have the downloaded the SAP NetWeaver Cloud SDK
 2. Connectivity: In the Connectivity tab of the Local Test Server, create two destinations, named "logindest" and the following URL to the URL field: https://<nw73server>:<port>/checklogin/ and "bpmdest" with URL: https://<nw73server>:<port>/bpm/bpemservices/
 
-More information:
+More information in my #SCN blog:
+http://scn.sap.com/community/developer-center/cloud-platform/blog/2013/01/29/sap-netweaver-cloud-and-restful-bpm-service
  
