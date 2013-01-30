@@ -8,5 +8,5 @@ Running locally and in the Cloud
 2. Connectivity: In the Connectivity tab of the Local Test Server, create two destinations, named "logindest" and the following URL to the URL field: https://<nw73server>:<port>/checklogin/ and "bpmdest" with URL: https://<nw73server>:<port>/bpm/bpemservices/
 
 More information in my #SCN blog:
-http://scn.sap.com/community/developer-center/cloud-platform/blog/2013/01/29/sap-netweaver-cloud-and-restful-bpm-service
+http://scn.sap.com/community/developer-center/cloud-platform/blog/2013/01/30/sap-netweaver-cloud-and-restful-bpm-service
  
